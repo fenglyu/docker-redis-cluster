@@ -110,6 +110,7 @@ build-5.0:
 build-6.0:
 	@docker build --build-arg redis_version=6.0.0 -t grokzen/redis-cluster:6.0.0 .
 	@docker build --build-arg redis_version=6.0.1 -t grokzen/redis-cluster:6.0.1 .
+	@docker build --build-arg redis_version=6.0.1 -t grokzen/redis-cluster:6.0.8 .
 
 build-latest:
 	docker build --build-arg redis_version=6.0.1 -t grokzen/redis-cluster:latest .

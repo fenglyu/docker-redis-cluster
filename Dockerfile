@@ -1,5 +1,5 @@
 # Build based on redis:6.0 from 2020-05-05
-FROM redis@sha256:f7ee67d8d9050357a6ea362e2a7e8b65a6823d9b612bc430d057416788ef6df9
+FROM redis:6.0.8
 
 LABEL maintainer="Johan Andersson <Grokzen@gmail.com>"
 
@@ -7,6 +7,7 @@ LABEL maintainer="Johan Andersson <Grokzen@gmail.com>"
 ENV HOME /root
 ENV DEBIAN_FRONTEND noninteractive
 
+COPY sources.list /etc/apt/sources.list
 # Install system dependencies
 RUN apt-get update -qq && \
     apt-get install --no-install-recommends -yqq \
